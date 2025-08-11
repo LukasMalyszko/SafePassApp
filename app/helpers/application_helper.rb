@@ -8,4 +8,9 @@ module ApplicationHelper
   def account_page?
     current_page?(edit_user_registration_path)
   end
+
+  def format_time(time)
+    time.strftime("%d/%m/%Y, %I:%M %p")
+  end
+
 end
