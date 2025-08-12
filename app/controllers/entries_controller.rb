@@ -1,14 +1,14 @@
 class EntriesController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_entry, only: [:show, :destroy]
 
   def index
     @entries = current_user.entries
     @main_entry = current_user.entries.first
   end
 
-  def show
-    @entry = current_user.entries.find(params[:id])
-  end
+  def show;  end
+
   def new
     @entry = Entry.new
   end
@@ -17,15 +17,23 @@ class EntriesController < ApplicationController
     @entry = current_user.entries.new(entry_params)
 
     if @entry.save
-      flash[:notice] = "Entry created!"
+      flash.now[:notice] = "<strong>#{@entry.name}</strong> has been saved!".html_safe
       respond_to do |format|
         format.html { redirect_to root_path }
         format.turbo_stream {}
       end
 
     else
-      flash[:alert] = "Sorry entry not created!"
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @entry.destroy
+    flash.now[:notice] = "#{@entry.name} has been deleted."
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.turbo_stream {}
     end
   end
 
@@ -33,5 +41,9 @@ class EntriesController < ApplicationController
 
   def entry_params
     params.expect(entry: [:name, :url, :username, :password])
+  end
+
+  def set_entry
+    @entry = current_user.entries.find(params[:id])
   end
 end
