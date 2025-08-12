@@ -1,0 +1,51 @@
+#entry-name {
+   .edit-name {
+     flex-grow: 1;
+   }
+   .edit-username,
+   .edit-password,
+   .edit-url {
+     display: none;
+    }
+}
+
+#entry-username {
+   .edit-username {
+    flex-grow: 1;
+   }
+    .edit-name,
+    .edit-password,
+    .edit-url {
+      display: none;
+   }
+}
+
+#entry-password {
+   .edit-password {
+     flex-grow: 1;
+   }
+   .edit-name,
+   .edit-username,
+   .edit-url {
+     display: none;
+   }
+}
+
+#entry-url {
+   .edit-url {
+     flex-grow: 1;
+     padding-left: 0;
+   }
+   .edit-name,
+   .edit-username,
+   .edit-password {
+     display: none;
+   }
+}
+
+.entry-edit-actions {
+   position: absolute;
+   right: 10px;
+   top: 13px;
+}
+
