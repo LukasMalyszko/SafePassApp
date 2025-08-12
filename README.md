@@ -13,3 +13,8 @@ and run project via
 ```bash
 bin/dev
 ```
+open browser at
+
+```bash
+http://localhost:3001
+```
