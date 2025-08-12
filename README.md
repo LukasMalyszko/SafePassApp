@@ -1,24 +1,15 @@
-# README
+# SafePassApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To local run this SafePassApp this is steps:
 
-Things you may want to cover:
+get git clone
 
-* Ruby version
+```bash
+https://github.com/LukasMalyszko/SafePassApp.git
+```
 
-* System dependencies
+and run project via
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+bin/dev
+```
