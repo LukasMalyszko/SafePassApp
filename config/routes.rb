@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users, path: 'secure'
   get '/home', to: 'pages#home'
@@ -5,5 +7,5 @@ Rails.application.routes.draw do
 
   resources :entries
 
-  root "entries#index"
+  root 'entries#index'
 end
