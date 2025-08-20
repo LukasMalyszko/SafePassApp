@@ -18,3 +18,9 @@ open browser at
 ```bash
 http://localhost:3001
 ```
+
+App on production
+
+```
+https://safepassapp.fly.dev/
+```
