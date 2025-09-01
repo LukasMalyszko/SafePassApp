@@ -56,7 +56,6 @@
         height: 2.5rem;
       }
     }
-
   }
 
   .entries-actions {
@@ -71,12 +70,52 @@
     }
 
     .entry-search {
-      width: 24%;
+      width: 50%;
 
       .entry-search-button {
         position: absolute;
         right: .5rem;
         top: .65rem;        
+      }
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    #dashboard {
+      .entries-card {
+        &__sidebar {
+          width: 20%;
+          padding-top: .2rem;
+
+          .nav-link {
+            padding: .2rem;
+            margin: 0;
+
+            &:hover {
+              margin: 0;
+            }
+            
+            .entry-name {
+              display: none;
+            }
+          }
+        }
+
+        &__main {
+          width: 80%;
+          padding: .4rem 0;
+        }
+
+
+        .entry-favicon {
+          margin: 0;
+        }
+      }
+    }
+
+    .entries-actions {
+      &.card {
+        padding: .4rem;
       }
     }
   }

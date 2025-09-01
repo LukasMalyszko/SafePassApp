@@ -2,5 +2,5 @@
   <div class="entry-favicon">
     <%= image_tag("https://www.google.com/s2/favicons?domain=#{entry.url}&sz=32", alt: entry.name) %>
   </div>
-  <%= yield %>
+  <div class="entry-name w-100"><%= yield %></div>
 </div>
